@@ -1,0 +1,52 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label class="search-bar"><mat-icon class="search-icon" aria-hidden="false" >search</mat-icon> Search</mat-label>
+    <input class="search-bar" matInput placeholder="Ex. Harsha" value="">
+  </mat-form-field>
+<div class="userhome-main">
+  <div class="mini-profile">
+    <mat-card class="example-card">
+      <mat-card-title-group class="main-card-profile">
+        <div>
+          <mat-card-title class="matTitle matFont"
+            >Arcanine Wrld</mat-card-title
+          >
+          <mat-card-subtitle class="matFont">@HvWrld</mat-card-subtitle>
+        </div>
+        <div>
+          <img
+            class="dpImage"
+            mat-card-sm-image
+            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          />
+        </div>
+      </mat-card-title-group>
+    </mat-card>
+  </div>
+  <div class="list-nav">
+    <mat-card class="listItems">
+      <mat-selection-list #shoes [multiple]="false">
+          <div class="vertical">
+            <mat-icon class="icon-mats" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        <mat-list-option [value]="1" routerLink="/Login">
+            Home</mat-list-option></div>
+            <div  class="vertical">
+            <mat-icon class="icon-mats" aria-hidden="false" >photos</mat-icon>
+        <mat-list-option [value]="2">Photos</mat-list-option></div>
+        <div  class="vertical">
+            <mat-icon class="icon-mats" aria-hidden="false">feed</mat-icon>
+        <mat-list-option [value]="3">My Feed</mat-list-option></div>
+        <div  class="vertical">
+            <mat-icon class="icon-mats" aria-hidden="false">people</mat-icon>
+        <mat-list-option [value]="4">People</mat-list-option></div>
+        <div  class="vertical">
+            <mat-icon class="icon-mats" aria-hidden="false">person</mat-icon>
+        <mat-list-option [value]="5">Profile</mat-list-option></div>
+        <div  class="vertical">
+            <mat-icon class="icon-mats" aria-hidden="false">settings</mat-icon>
+        <mat-list-option [value]="6">Settings</mat-list-option></div>
+      </mat-selection-list>
+
+      <p>Option selected: {{ shoes.selectedOptions.selected[0]?.value }}</p>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+  <div class="main-control">
+  <mat-card class="main-card">
+    <mat-card-header class="pageHeader">
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-title class="title">Create Account</mat-card-title>
+    </mat-card-header>
+    <h3></h3>
+    <div>
+        <p class="subtitle">Please fill in this form to create an account.</p>
+    </div>
+    <mat-card-content>
+        <form [formGroup]="addUser" (ngSubmit)="addUserDetails(addUser.value)" class="signup-form sizing" action="/register" method="post">
+            <!-- form body  -->
+            <div class="form-body">
+      
+              <!-- Firstname and Lastname -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label for="firstname" class="label-title">First name *</label>
+                  <input formControlName="firstName" type="text" id="firstname" class="form-input" placeholder="enter your first name" required="required" />
+                </div>
+                <div class="form-group right">
+                  <label for="lastname" class="label-title">Last name *</label>
+                  <input formControlName="lastName" type="text" id="lastname" class="form-input" placeholder="enter your last name" required="required" />
+                </div>
+              </div>
+              <!-- Username -->
+              <div class="form-group">
+                <label for="username" class="label-title">Username *</label>
+                <input formControlName="userName" type="username" id="username" class="form-input" placeholder="enter username choice" required="required">
+              </div>
+              <!-- Passwrod and confirm password -->
+              <div class="horizontal-group">
+                <div class="form-group left">
+                  <label for="password" class="label-title">Password *</label>
+                  <input formControlName="password" type="password" id="password" class="form-input" placeholder="enter your password" required="required">
+                </div>
+                <div class="form-group right">
+                  <label for="confirm-password" class="label-title">Confirm Password *</label>
+                  <input type="password" class="form-input" id="confirm-password" placeholder="enter password again">
+                </div>
+              </div>
+              <!-- Phone Number-->
+              <div class="form-group">
+                <label for="MobileNumber" class="label-title">Mobile Number *</label> 
+                <input formControlName="phoneNumber" type="text" id="phoneNumber" class="form-input" name="MobileNumber" placeholder="Mobile number" pattern="[7-9]{1}[0-9]{9}" required><br>
+              </div>
+              
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email" class="label-title">Email *</label>
+                <input formControlName="email" type="email" id="email" class="form-input" placeholder="enter your email" required="required">
+              </div>
+      
+              
+      
+              
+              
+              <div class="LoginButton">
+                <button type="submit" class="btn">Register</button>
+              </div>
+              <!-- Profile picture and Age -->
+              <!-- <div class="horizontal-group">
+                <div class="form-group left" >
+                  <label for="choose-file" class="label-title">Upload Profile Picture</label>
+                  <input type="file" id="choose-file" size="80">
+                </div>
+                <div class="form-group right">
+                  <label for="experience" class="label-title">Age</label>
+                  <input type="number" min="18" max="80"  value="18" class="form-input">
+                </div>
+              </div> -->
+              
+            </div>
+            
+            <!-- form-footer -->
+            <div class="form-footer footer-sizing" >
+                <span>* required</span>
+                <button type="button" class="btn" (click)="keyChange(0)">Signin</button>
+            </div>
+          </form>
+    </mat-card-content>
+    <!-- <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions> -->
+  </mat-card>
+</div>
